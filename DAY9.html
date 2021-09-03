@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY9</title>
+</head>
+<h3>MY FAVORITE FILM LIST</h3>
+<body>
+    <div class=button>
+        <button onclick="Film_List(first)">INCEPTION</button>
+        <button onclick="Film_List(second)">TENET</button>
+        <button onclick="Film_List(third)">TWILIGHT</button>
+    </div>
+    <div class=img>
+        <img class="img1" src="img/inception.jpg" onclick="first()" height="100px" width="80px">
+        <img class="img2" src="img/tenet.jpg"  onclick="second()" height="100px" width="80px">
+        <img class="img3" src="img/twilight.jpg"  onclick="third()" height="100px" width="80px">
+    </div>
+    <div>
+        <ul>
+            <li id="title">TITLE: &nbsp; </li>
+            <li id="date">RELEASE DATE: &nbsp;</li>
+            <li id="genre">GENRE: &nbsp;</li>
+            <li id="director">DIRECTOR: &nbsp;</li>
+            <li id="boxoffice">BOXOFFICE: &nbsp;</li>
+        </ul>
+    </div>    
+    <script >
+
+var first ={name:"INCEPTION", date:" July 21, 2010", genre:"Action · Adventure · Sci-Fi · Thriller", director:"Christopher Nolan", boxoffice:"$836.8 million"}
+var second ={name: "TENET", date:"August 12, 2020", genre:"Action · Sci-Fi", director: "Christopher Nolan",boxoffice:" $363.7 million" }
+var third ={name:"TWILIGHT", date:"November 17, 2008", genre:"Romance · Fantasy" ,director:"Catherine Hardwicke", boxoffice:" $407.1 million"}
+
+function Film_List(movie){
+    title.innerText = "TITLLE: " + movie.name;
+    date.innerText = "RELEASE DATE " +movie.date;
+    genre.innerText = "GENRE: " + movie.genre;
+    director.innerText = "DIRECTOR: " + movie.director;
+    boxoffice.innerText = "BOXOFFICE: " + movie.boxoffice;
+}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 14</title>
+   
+</head>
+<body>
+    <div id="main">
+        <div id="chatBot">
+            <div id="message">
+                <b id="msg">Hello</b>
+            </div>
+            <div class="bot">
+                <img src="android_logo_PNG23.png" alt="android">
+            </div>
+            <div class="chatBox">
+                <input type="text" id="console" placeholder="ANDROID!">
+                <input type="button" id="btn" value="talking">
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = document.getElementById("typing");
+
+var typewriter = new Typewriter(app, {
+    loop: true,
+    delay: 75
+});
+
+typewriter
+    .typeString("TALK SOMETHING TO ANDROID!")
+    .pauseFor(2000)
+    .deleteAll()
+    .typeString("INPUT : WHAT AM I HAVE TO EAT?/ HELLO/TURNOFF/TURNON/WHAT DO U WANT TO DO?")
+    .pauseFor(2000)
+    .deleteChars(10)
+    .start();
+
+    function text(){
+            let food = ["steak", "bread", "cake", "pasta", "friedchicken", "pizza", "hambuger", "ramen", "jelly", "chocolate", "pudding", "icecream"];
+            let study = ["C", "Java", "Python", "JavaScript", "JQuery", "SQL", "PHP", "JSP", "GO", "R", "C++", "C#", "HTML", "CSS"]
+
+            let msg =  document.getElementById("msg");
+            var chat = document.getElementById("console").value;
+            console.log("user: " + chat);
+            if(chat == "Hello") {
+                msg.innerText = "Hello!!";
+                console.log("android:" + msg.innerText);
+            }
+            else if(chat == "TURNOFF") {
+                msg.innerText = "GOODNIGHT~";
+                console.log("android:" + msg.innerText);
+                document.bgColor="gray";
+            }
+            else if(chat == "TURNON") {
+                msg.innerText = "IT's TOO EARLY MORNING~";
+                console.log("android:" + msg.innerText);
+                document.bgColor="white";
+            }
+            else if(chat == "WHAT AM I HAVE TO EAT?") {
+                var j = Math.floor(Math.random()*food.length);
+                msg.innerText = food[j] + " EAT";
+                console.log("android:" + msg.innerText);
+                document.bgColor="white";
+            }
+            else if(chat == "WHAT DO U WANT TO DO?") {
+                var j = Math.floor(Math.random()*study.length);
+                msg.innerText = study[j] + " DO IT";
+                console.log("android:" + msg.innerText);
+                document.bgColor="white";
+            }
+            else {
+                msg.innerText = "PARDON?.";
+                console.log("android:" + msg.innerText);
+            }
+}
+document.getElementById("btn").addEventListener("click",text);
+    </script>
+    <style>
+          body {
+            height: 1000px;
+            background-repeat: no-repeat;
+        }
+        #main {
+            width: 100%;
+            text-align: center;
+        }
+        img {
+            width: 250px;
+            height: 270px;
+        }
+        input {
+            display: block;
+        }
+        #chatBot {
+            display: inline-block;
+            margin-top: 4em;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 100%;
+        }
+        #message {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border: solid black 1px; 
+            border-radius: 10px;
+            width: 600px;
+            height: 200px;
+            line-height: 200px;
+            font-size: 30px;
+        }
+        .bot {
+            margin-bottom: 50px;
+        }
+        .chatBox{
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        #console {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+            width: 550px;
+            height: 30px;
+        }
+        #btn {
+            margin-left: auto;
+            margin-right: auto;
+            border:green 1px;
+            border-radius: 50px;
+            width: 300px;
+            height: 50px;
+            background-color:green;
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+        }
+        #btn:hover {
+           border:yellowgreen solid 1px;
+           background-color:yellow;
+        }
+    </style>
+</body>
+</html>

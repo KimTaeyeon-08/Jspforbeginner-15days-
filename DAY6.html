@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>operation</title>
+<script language="javascript">
+function calculate(e) 
+{
+    if(e.keyCode == "13")
+  {
+    var exp = document.getElementById("exp");
+    var result = document.getElementById("result");
+    result.value = eval(exp.value);
+    }
+} 
+</script>
+</head>
+<body>
+<h3>CALCULATION</h3>
+<h3>Press Enter to calculate.</h3>
+<form>
+<input type="num" id="exp" onkeydown="calculate(event)"><br>
+<input type="num" id="result">
+</form>
+</body>
+</html>

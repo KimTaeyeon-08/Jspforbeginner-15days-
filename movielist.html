@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MOVIE PICKS</title>
+</head>
+
+<body>
+    <div class= main>   
+    <div class = "contents">
+            <img class="pic" width="900px"/>    
+            <div class = "info">
+                <div class="box_container"> 
+                <div class = "detail_box">
+                <div class = "detail title"></div>
+                </div>
+                <div class = "detail_box">
+                <span class = "list"></span><span class = "detail"></span>
+                </div>
+                <div class = "detail_box">
+                <span class = "list"></span><span class = "detail"></span>
+                </div>
+                <div class = "detail_box">
+                <span class = "list"></span><span class = "detail"></span>
+                </div>
+            </div>
+            </div>  
+    </div>
+    <div class=right>
+        TAEYEON'S FILM PICKS
+        <br>
+    <div class=button>
+        <img class="btn1" src="img/inception.jpg" onclick="movie_01()" height="200px" width="135px">
+        <img class="btn2" src="img/tenet.jpg"  onclick="movie_02()" height="200px" width="135px">
+        <img class="btn3" src="img/twilight.jpg"  onclick="movie_03()" height="200px" width="135px">
+      
+
+    </div>
+</div>
+</div>
+    <script>
+        var info = {name: "", release: "", genre: "", cast: ""};
+var detail = document.getElementsByClassName("detail");
+var list = document.getElementsByClassName("list");
+var pic = document.getElementsByClassName("pic");
+
+function movie_01() {
+    info.name = "Inception ";
+    info.release = "July 21, 2010 (South Korea)";
+    info.genre = "Action, Sci-fi";
+    info.cast = "Leonardo DiCaprio ,Joseph Gordon ,Tom Hardy ,Cillian Murphy  ";
+
+    list[0].innerText = "Release | ";
+    list[1].innerText = "Genre | ";
+    list[2].innerText = "Cast | ";
+    pic[0].src = "img/inception2.jpg";
+    detail[0].innerText = info.name;
+    detail[1].innerText = info.release;
+    detail[2].innerText = info.genre;
+    detail[3].innerText = info.cast;
+    
+}
+
+function movie_02() {
+    info.name = "Tenet";
+    info.release = "August 12, 2020 (USA)";
+    info.genre = "Action,Sci-fi,Thriller";
+    info.cast = "John David Washington ,Robert Pattinson, Elizabeth Debicki ,Kenneth Branagh";
+
+    pic[0].src = "img/tenet2.jpg";
+    list[0].innerText = "Release | ";
+    list[1].innerText = "Genre | ";
+    list[2].innerText = "Cast | ";
+    detail[0].innerText = info.name;
+    detail[1].innerText = info.release;
+    detail[2].innerText = info.genre;
+    detail[3].innerText = info.cast;
+}
+
+function movie_03() {
+    info.name = "Twilight";
+    info.release = "December 10, 2008 (South Korea) ";
+    info.genre = "Romance/Fantasy";
+    info.cast = "Robert Pattinson, Kristen Stewart, Taylor Lautner, Nikki Reed ";
+    info.runningtime = "2h 6m ";
+
+    pic[0].src = "img/twilight2.jpg";
+    list[0].innerText = "Release | ";
+    list[1].innerText = "Genre | ";
+    list[2].innerText = "Cast | ";
+    list[3].innerText = "Running Time | ";
+
+
+    detail[0].innerText = info.name;
+    detail[1].innerText = info.release;
+    detail[2].innerText = info.genre;
+    detail[3].innerText = info.cast;
+    detail[4].innerText = info.runningtime;
+}
+    </script>
+    <style>
+        body{
+    margin:0;
+    background-color: black; 
+}
+
+.main{
+    display: flex; 
+    position:fixed;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;  
+    margin-right:10px; 
+    color:white; 
+} 
+    
+.right{
+    display: flex; 
+    line-height: 30px; 
+    flex-direction: column; 
+    color:white; 
+    margin:20px; font-size: 20px;}
+
+.button{
+    display: flex;  
+    margin:10px 10px 0 0; 
+    float: right; 
+    height:450px;
+}
+
+.button>img{
+    margin-right: 10px;
+}
+
+.box_container{
+    
+    width:700px; 
+    margin-top: 290px;
+    padding: 0 0 20px 20px;
+    line-height: 20px;
+}
+
+.info{
+    position: absolute; 
+    font-size: 13px;
+}
+
+.title{
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+    </style>
+</body>
+
+</html>

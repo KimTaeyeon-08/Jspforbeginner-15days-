@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DAY8 </title>
+</head>
+<script language="javascript">
+   
+    let id = ['코','린','이'];
+    let count = 0;
+    let text = ' ';
+    let nickname = document.getElementsByTagName('h1');
+    
+    function showid(){
+        count++;
+        if(count>id.length){
+           
+            count = 0;
+        }
+
+        for(let i = 0; i<count; i++){
+           
+            text = text + id[i];
+        }
+        nickname[0].innerHTML = text;
+        text = ' ';
+    }   
+</script>
+
+    <style>
+        .box{
+            margin: 100px auto;
+            text-align: center;
+        }
+        button{
+            background-color: #020202; 
+            color: rgb(252, 11, 192);
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+        }
+        button:hover{
+            background-color:  #0174f8;
+        }
+        h1{
+            height: 50px;
+        }
+    </style>
+
+<body>
+    <div class="box">
+        <h1>HELLO</h1>
+        <button onclick="showid()">show</button>    
+    </div>
+</body>
+</html>

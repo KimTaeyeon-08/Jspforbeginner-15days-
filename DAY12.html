@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DAY12</title>
+    <h1>말하는 고양이 톰</h1>
+
+</head>
+
+<body>
+    
+    <div id="main">
+        
+        <div id="Tom">
+            
+            <div id="first">
+                <b id="sen">!안녕하슈! 난 톰이에요!</b>
+            </div>
+            
+            <div class="tommy">
+                <img src="img/tom.png" alt="TOM">
+            </div>
+            
+            <div class="chatiing">
+                <input type="speaking" id="console" placeholder="톰에게 인사하기">
+                <input type="button" id="btn" value="말걸기">
+            </div>
+        
+        </div>
+    
+    </div>
+    
+    <script class = javascript>
+        function speaking(){
+            let sen =  document.getElementById("sen");
+            var chatt = document.getElementById("console").value;
+            console.log("user: " + chatt);
+            if(chatt == "안녕 ! 나는 코린이라고 해!") {
+                sen.innerText = "코린이?ㅋㅋㅋ하하하하하?";
+                console.log("TOM:" + sen.innerText);
+            }
+            else if(chatt == "불꺼"){
+                sen.innerText = "오케이"
+                console.log("TOM : +sen.innerText");
+                document.bgColor = "black";
+            }
+            else if(chatt == "불켜"){
+                sen.innerText = "5분만 더...."
+                console.log("TOM : +sen.innerText");
+                document.bgColor = "white";
+            }
+          
+            else {
+                sen.innerText = "뭐라는 거야?!?";
+                console.log("TOM:" + sen.innerText);
+            }
+}
+    document.getElementById("btn").addEventListener("click",speaking);
+    </script>
+
+<style>
+        body {
+            height: 1000px;
+            background: -webkit-linear-gradien;
+            background-repeat: no-repeat;
+        }
+        #main {
+            width: 100%;
+            text-align: center;
+        }
+   
+        input {
+            display: block;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+        #Tom {
+            display: inline-block;
+            margin-top: 5em;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 130%;
+        }
+        #first {
+            display: inline-block;
+            left: auto;
+            right: auto;
+            text-align: center;
+            top: 50px;
+            bottom: 50px;
+            border: solid greenyellow 1px; 
+            border-radius: 10px;
+            width: 500px;
+            height: 300px;
+            line-height: 200px;
+            font-size: 30px;
+        }
+        .tommy {
+            bottom: 50px;
+        }
+        .chatting{
+            display: inline-block;
+            left: auto;
+            right: auto;
+            text-align: center;
+        }
+        #console {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            width: 600px;
+            height: 50px;
+        }
+     
+        #btn {
+            margin-left: auto;
+            margin-right: auto;
+            border:greenyellow solid 3px;
+            border-radius: 50px;
+            width: 300px;
+            height: 60px;
+            background-color: greenyellow;
+            cursor: pointer;
+            font-size: 40px;
+            color: white;
+        }
+     
+</style>
+</body>
+</html>

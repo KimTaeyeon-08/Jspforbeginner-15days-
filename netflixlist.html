@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NETFLIX PICKS</title>
+</head>
+
+<body>
+    <div class= main>   
+    <div class = "contents">
+            <img class="pic" width="700px"/>    
+            <div class = "info">
+                <div class="box_container"> 
+                <div class = "detail_box">
+                <div class = "detail title"></div>
+                </div>
+                <div class = "detail_box">
+                <span class = "list"></span><span class = "detail"></span>
+                </div>
+                <div class = "detail_box">
+                <span class = "list"></span><span class = "detail"></span>
+                </div>
+                <div class = "detail_box">
+                <span class = "list"></span><span class = "detail"></span>
+                </div>
+            </div>
+            </div>  
+    </div>
+    <div class=right>
+        TAEYEON'S NETFLIX PICKS
+        <br>
+    <div class=button>
+        <img class="btn1" src="img/you1.jpg" onclick="movie_01()" height="200px" width="135px">
+        <img class="btn2" src="img/shadow-and-bone 1.jpg"  onclick="movie_02()" height="200px" width="135px">
+        <img class="btn3" src="img/strangerthings1.jpg"  onclick="movie_03()" height="200px" width="135px">
+
+    </div>
+</div>
+</div>
+    <script>
+        var info = {name: "", release: "", genre: "", cast: ""};
+var detail = document.getElementsByClassName("detail");
+var list = document.getElementsByClassName("list");
+var pic = document.getElementsByClassName("pic");
+
+function movie_01() {
+    info.name = "You";
+    info.release = "September 9, 2018";
+    info.genre = "Drama, Romance, Thriller, Crime";
+    info.cast = "Penn Badgley , Victoria Pedretti, Elizabeth Lali, Jenna Ortega ";
+
+    list[0].innerText = "Release | ";
+    list[1].innerText = "Genre | ";
+    list[2].innerText = "Cast | ";
+    pic[0].src = "img/you2.jpg";
+    detail[0].innerText = info.name;
+    detail[1].innerText = info.release;
+    detail[2].innerText = info.genre;
+    detail[3].innerText = info.cast;
+    
+}
+
+function movie_02() {
+    info.name = "Shadow and Bone";
+    info.release = "April 23, 2021";
+    info.genre = "Novel, Adventure Fiction, Fantasy";
+    info.cast = "Jessie Mei Li, Ben Bames, Freddy Carter, Archie Renaux";
+
+    pic[0].src = "img/shadow and bone 2.jpg";
+    list[0].innerText = "Release | ";
+    list[1].innerText = "Genre | ";
+    list[2].innerText = "Cast | ";
+    detail[0].innerText = info.name;
+    detail[1].innerText = info.release;
+    detail[2].innerText = info.genre;
+    detail[3].innerText = info.cast;
+}
+
+function movie_03() {
+    info.name = "Stranger Things";
+    info.release = "Sci-fi, Horror, Drama ";
+    info.genre = "Comedy, Action";
+    info.cast = "Millie Bobby Brown, Finn Wolfhard, Noah Schnap, Gaten Matarazzo";
+
+    pic[0].src = "img/strangerthings2.jpg";
+    list[0].innerText = "Release | ";
+    list[1].innerText = "Genre | ";
+    list[2].innerText = "Cast | ";
+    detail[0].innerText = info.name;
+    detail[1].innerText = info.release;
+    detail[2].innerText = info.genre;
+    detail[3].innerText = info.cast;
+}
+    </script>
+    <style>
+        body{
+    margin:0;
+    background-color: black; 
+}
+
+.main{
+    display: flex; 
+    position:fixed;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;  
+    margin-right:10px; 
+    color:white; 
+} 
+    
+.right{
+    display: flex; 
+    line-height: 30px; 
+    flex-direction: column; 
+    color:white; 
+    margin:20px; font-size: 20px;}
+
+.button{
+    display: flex;  
+    margin:10px 10px 0 0; 
+    float: right; 
+    height:450px;
+}
+
+.button>img{
+    margin-right: 10px;
+}
+
+.box_container{
+    
+    width:700px; 
+    margin-top: 290px;
+    padding: 0 0 20px 20px;
+    line-height: 20px;
+}
+
+.info{
+    position: absolute; 
+    font-size: 13px;
+}
+
+.title{
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+    </style>
+</body>
+
+</html>
